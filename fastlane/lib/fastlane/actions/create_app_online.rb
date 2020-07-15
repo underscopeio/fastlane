@@ -12,7 +12,7 @@ module Fastlane
 
         Produce.config = params # we alread have the finished config
 
-        Dir.chdir(FastlaneCore::FastlaneFolder.path || Dir.pwd) do
+        Dir.chdir(FastlaneCore::FastlaneFolder.path) do
           # This should be executed in the fastlane folder
           apple_id = Produce::Manager.start_producing.to_s
 

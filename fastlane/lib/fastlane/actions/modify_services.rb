@@ -6,7 +6,7 @@ module Fastlane
 
         Produce.config = params
 
-        Dir.chdir(FastlaneCore::FastlaneFolder.path || Dir.pwd) do
+        Dir.chdir(FastlaneCore::FastlaneFolder.path) do
           require 'produce/service'
           services = params[:services]
 

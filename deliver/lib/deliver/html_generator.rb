@@ -10,7 +10,7 @@ module Deliver
     def run(options, screenshots)
       begin
         # Use fastlane folder or default to current directory
-        fastlane_path = FastlaneCore::FastlaneFolder.path || "."
+        fastlane_path = FastlaneCore::FastlaneFolder.path
         html_path = self.render(options, screenshots, fastlane_path)
       rescue => ex
         UI.error(ex.inspect)

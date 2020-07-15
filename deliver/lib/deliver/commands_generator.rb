@@ -66,7 +66,7 @@ module Deliver
 
           # Check if we already have a deliver setup in the current directory
           loaded = true if options[:description] || options[:ipa] || options[:pkg]
-          loaded = true if File.exist?(File.join(FastlaneCore::FastlaneFolder.path || ".", "metadata"))
+          loaded = true if File.exist?(File.join(FastlaneCore::FastlaneFolder.path, "metadata"))
           unless loaded
             if UI.confirm("No deliver configuration found in the current directory. Do you want to setup deliver?")
               is_swift = UI.confirm("Would you like to use Swift instead of Ruby?")
